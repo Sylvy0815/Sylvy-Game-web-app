@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import NavigationBar from "./components/NavigationBar"; // 경로 확인 필요
+import SideBar from "./components/SideBar"; // 경로 확인 필요
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavigationBar /> {/* 상단 내비게이션 바 */}
+      <SideBar /> {/* 왼쪽 사이드바 */}
+      <main className="mainContent">{/* 주요 컨텐츠 */}</main>
     </div>
   );
 }

@@ -1,0 +1,24 @@
+.navigationBar {
+  background-color: #333; /* 어두운 배경색 */
+  color: white; /* 텍스트 색상 */
+  height: 50px; /* 네비게이션 바의 높이 */
+  width: 100%; /* 화면 전체 너비 */
+  position: fixed; /* 상단에 고정 */
+  top: 0; /* 화면 상단부터 시작 */
+  z-index: 1000; /* 다른 요소들 위에 표시 */
+  display: flex; /* 로고와 항목들을 수평으로 나열 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: space-between; /* 요소들을 양 끝으로 정렬 */
+  padding: 0 20px; /* 좌우 패딩 */
+}
+
+.navigationBar ul {
+  list-style-type: none; /* 기본 목록 스타일 제거 */
+  display: flex; /* 항목들을 가로로 나열 */
+  margin: 0; /* 기본 마진 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+}
+
+.navigationBar li {
+  margin-right: 20px; /* 항목들 사이의 마진 */
+}
