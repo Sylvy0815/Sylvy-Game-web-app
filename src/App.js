@@ -1,15 +1,25 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavigationBar from "./components/NavigationBar"; // 경로 확인 필요
 import SideBar from "./components/SideBar"; // 경로 확인 필요
+import Home from "./pages/Home"; // Home 컴포넌트의 경로 확인 필요
+import Ninokuni from "./pages/Ninokuni"; // Game 컴포넌트의 경로 확인 필요
+import "./App.css";
+import NinokuniUserInfoPage from "./pages/NinokuniUserInfoPage";
 
 function App() {
   return (
-    <div className="App">
-      <NavigationBar /> {/* 상단 내비게이션 바 */}
-      <SideBar /> {/* 왼쪽 사이드바 */}
-      <main className="mainContent">{/* 주요 컨텐츠 */}</main>
-    </div>
+    <Router>
+      <NavigationBar />
+      <SideBar />
+      <main className="mainContent">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/ninokuni" element={<Ninokuni />} />
+          <Route path="/ninokuni/userinfo" element={<NinokuniUserInfoPage />} />
+        </Routes>
+      </main>
+    </Router>
   );
 }
 

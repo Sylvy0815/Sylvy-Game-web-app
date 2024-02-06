@@ -12,6 +12,7 @@ npm 10.4.0
 nvm use 20.11.0
 npm install -g npm@latest
 npx create-react-app sylvy-game
+npm install react-router-dom
 
 ## run
 

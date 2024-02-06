@@ -1,15 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./SideBar.css";
 
 function SideBar() {
   return (
     <div className="sideBar">
-      {/* 사이드바의 내용을 여기에 추가 */}
       <ul>
-        <li>홈</li>
-        <li>게임1</li>
-        <li>게임2</li>
-        <li>게임3</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/ninokuni">제2의나라</Link>
+        </li>
+        {/* 다른 링크들 */}
       </ul>
     </div>
   );
