@@ -1,4 +1,22 @@
+/* App.css */
 .App {
+  text-align: center;
+}
+
+/* .content {
+  display: flex;
+  flex-direction: column;
+} */
+
+.mainContent {
+  margin-top: 50px;
+  margin-left: 200px; /* 사이드바의 너비만큼 마진을 줌 */
+  padding: 20px; /* 내용과 경계 사이의 공간 */
+  position: relative;
+  z-index: 1;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +53,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
