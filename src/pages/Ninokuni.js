@@ -10,6 +10,9 @@ function Ninokuni() {
         <li>
           <Link to="/ninokuni/userinfo">계정코드 등록하기</Link>
         </li>
+        <li>
+          <Link to="/ninokuni/couponsubmission">쿠폰코드 제보하기</Link>
+        </li>
         {/* 다른 링크들 */}
       </ul>
     </div>

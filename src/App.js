@@ -6,6 +6,7 @@ import Home from "./pages/Home"; // Home 컴포넌트의 경로 확인 필요
 import Ninokuni from "./pages/Ninokuni"; // Game 컴포넌트의 경로 확인 필요
 import "./App.css";
 import NinokuniUserInfoPage from "./pages/NinokuniUserInfoPage";
+import CouponSubmissionPage from "./pages/CouponSubmissionPage";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/ninokuni" element={<Ninokuni />} />
           <Route path="/ninokuni/userinfo" element={<NinokuniUserInfoPage />} />
+          <Route
+            path="/ninokuni/couponsubmission"
+            element={<CouponSubmissionPage />}
+          />
         </Routes>
       </main>
     </Router>

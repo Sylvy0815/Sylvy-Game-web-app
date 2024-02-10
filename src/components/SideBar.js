@@ -7,7 +7,7 @@ function SideBar() {
     <div className="sideBar">
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">공지사항</Link>
         </li>
         <li>
           <Link to="/ninokuni">제2의나라</Link>

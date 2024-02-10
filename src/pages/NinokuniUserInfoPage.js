@@ -14,10 +14,33 @@ function NinokuniUserInfoPage() {
     setNewEntry({ ...newEntry, [name]: value });
   };
 
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   setUserInfo([...userInfo, newEntry]);
+  //   setNewEntry({ server: "", nickname: "", pid: "" }); // 폼 초기화
+  // };
   const handleSubmit = (event) => {
     event.preventDefault();
-    setUserInfo([...userInfo, newEntry]);
-    setNewEntry({ server: "", nickname: "", pid: "" }); // 폼 초기화
+
+    // 백엔드 API로 POST 요청 보내기
+    fetch("http://localhost:3000/ninokuniusers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newEntry),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        // 사용자 목록에 새로운 사용자 추가
+        setUserInfo([...userInfo, newEntry]);
+        // 폼 초기화
+        setNewEntry({ server: "", nickname: "", pid: "" });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   return (
